@@ -76,11 +76,11 @@ Your journey will take you through the wildness of the American Midwest and acro
 ```
 
 1. In the **main** module, one of the first lines of code is `const drovers = hireDrovers(cattleToDrive)`. Explain what the value of the `drovers` variable is when that line of code runs.
-   > Your answer here
+   > This line of code uses the function `hireDrovers()` (from drover.js) to populate the `drovers` variable with a list of drovers, based on the number of cattle to be drive. That function pulls a list of all possible drovers, then randomly selects drovers until it reaches the number needed. The resulting list is used to populate the `drovers` variable in `main`.
 2. At the bottom of the main module, you will see the following code - `for (const drover of drovers)`. Explain what the values of both the `drover` and the `drovers` variables are.
-   > Your answer here
+   > This for loop iterates over all the objects in the `drovers` list. With each iteration of the loop, the next drover from `drovers` is assigned to `drover`.
 3. In the **journey** module, there is a `journeyMaker()` function. In that function, there is a variable named `areas` which will have the value of an object. Use your debugger to show what the value of each key is on that object. Use [Loom](https://www.loom.com) to record your session.
-   > Your public Loom URL here
+   > https://www.loom.com/share/2d1a51a27fa8415fb4eb6c5896f66255?sid=d1d7c581-f143-4410-84ce-b0e382a96688
 4. Also in the **journey** module, there is the following code:
    ```js
    for (let forestNumber = 0; forestNumber < areas.forests; forestNumber++) {
@@ -88,11 +88,11 @@ Your journey will take you through the wildness of the American Midwest and acro
    }
    ```
    Explain this code with your best vocabulary.
-   > Your answer here
+   > The `areas` assignment above added assigned a random number to each type terrain. These for loops will add that many instances of that terrain to `journey`. E.g., if `river: 2`, then the loop will run twice and push a `river` twice. At the end of the method, `journey` is randomized.
 5. Explain the value of the `database` variable in the **database** module. Be as comprehensive as possible.
-   > Your answer here
+   > The `database` variable is a collection of data arrays, each of which are filled with objects. So, if you've pulled the database variable into a module, you can now access the list of drovers by accessing `database.drovers`. Since multiple data sets are collected under `database`, it's no longer necessary to explicitly list each one on the import statement.
 6. In the **drovers** module, there is a `hireDrovers()` function. You will notice the following code on that line - `(herdSize)`. What is that defining, and where does it get its value?
-   > Your answer here
+   > `herdSize` is used as a variable in the `hireDrovers` function, and is passed in as an argument when the function is called. In our `main` module, `cattleToDrive` is set to 50 one line above, then `cattleToDrive` is used in the argument when calling `hireDrovers()`.
 
 ## When You Are Done
 
